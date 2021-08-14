@@ -1,0 +1,14 @@
+p {
+    color: yellow;
+    font-size: xx-large;
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+.food-image{
+    height: 200px;
+    width: 200px;
+}

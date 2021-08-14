@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'main_app/show_movies.css' %}">
+</head>
+<body>
+    <h2>Find Your Movie</h2>
+    <h3>The url is : <a href={{url}}>{{url}}</a></h3>
+    <form method="GET">
+        <input type="text" name="movie">
+        <input type="submit" value = "Find" name="Find">
+    </form>
+    
+    <h2>You have searched for : {{searchWord}}</h2>
+    <div class="container">
+        {% for movie in movies %}
+        <p>{{movie.title}}</p>
+        <img class="food-image" src="{{movie.poster}}" alt="A photo">
+        {% endfor %}
+    </div>  
+</body>
+</html>
